@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blogpost.css">
+    <link rel="stylesheet" href="js/javascript.js">
+    
+    <title>Home</title>
+    <!-- <style>
+        .typing-effect {
+            /* border-right: .1em solid black; */
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        
+    </style> -->
+</head>
+<body>
+    <nav class="navigation max-w1 m-auto">
+        <div class="navleft"><span><i><b>iBlogs</b></i></span>
+            
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/blogpost.html">About</a></li>
+                <li><a href="/contact.html">Contact </a></li>
+            </ul>
+        </div>
+        <div class="navright">
+            <form action="search.html" method="get">
+            <input type="text" name="query" placeholder="Search article" class="form-control">
+            <button type="button" class="btn ">Search </button>
+        </form>
+        </div>
+    </nav>
+    <div class="m-auto max-w1"><hr></div>
+    <div class="content  max-w1 m-auto">
+       
+        <div class="contentleft">
+            <h1 id="blog-heading" class="typing-effect"></h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur quibusdam est numquam pariatur incidunt, fugit eius ex atque totam sapiente accusamus autem tempora rerum ipsam sit perferendis ratione rem consequatur ipsum? Modi tempore atque vel adipisci, ut quam harum obcaecati voluptates non sapiente excepturi quisquam, quo magni incidunt illo iste libero, veniam eaque eum? Natus, id, aperiam quas aliquid debitis optio at officia, fuga officiis nostrum enim nihil? Dolore a eum, ipsam mollitia modi praesentium expedita pariatur quasi. Ipsa enim vitae temporibus beatae repellendus, hic ad id deleniti dignissimos corrupti!
+            </p>
+        </div>
+        <div class="contentright">
+            <img src="img/home.jpg" alt="img">
+        </div>
+    </div>
+    <div class="m-auto max-w1"><hr></div>
+    <div class="home-articles m-auto max-w1  ">
+        <h2>Featured Articles:</h2>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/article1.jpg" alt="img">
+            </div>
+            <div class="home-article-content">
+                <a href="/blogpost.html"><h3>Lorem ipsum, dolor sit amet consectetur adipisicing.</h3></a>
+                <span>Author Name</span>
+                <span>6 January 2020 | 10 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/article2.jpg" alt="img">
+            </div>
+            <div class="home-article-content">
+                <a href="/blogpost.html"><h3>Lorem ipsum, dolor sit amet consectetur adipisicing.</h3></a>
+                <span>Author Name</span>
+                <span>6 January 2020 | 10 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/article3.jpg" alt="img">
+            </div>
+            <div class="home-article-content">
+                <a href="/blogpost.html"><h3>Lorem ipsum, dolor sit amet consectetur adipisicing.</h3></a>
+                <span>Author Name</span>
+                <span>6 January 2020 | 10 min read</span>
+            </div>
+        </div>
+    </div>
+        <div class="footer  m-auto">
+       Copyright &copy; 
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const heading = document.getElementById('blog-heading');
+            const text = "Ayesha's Blogs";
+            let index = 0;
+
+            function typeWriter() {
+                if (index < text.length) {
+                    heading.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, 100);
+                } else {
+                    setTimeout(() => {
+                        heading.innerHTML = '';
+                        index = 0;
+                        typeWriter();
+                    }, 1000); // Wait for 2 seconds before restarting the typing
+                }
+            }
+
+            typeWriter();
+        });
+    </script>
+</body>
+</html>
